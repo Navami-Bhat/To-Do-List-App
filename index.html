@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Productivity Workspace</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+        <div>
+            <h1>Productivity Workspace</h1>
+            <p>Organize your tasks efficiently</p>
+        </div>
+
+        <button id="themeToggle">
+            🌙
+        </button>
+    </header>
+
+    <section class="stats">
+
+        <div class="card">
+            <h3 id="totalTasks">0</h3>
+            <span>Total Tasks</span>
+        </div>
+
+        <div class="card">
+            <h3 id="completedTasks">0</h3>
+            <span>Completed</span>
+        </div>
+
+        <div class="card">
+            <h3 id="pendingTasks">0</h3>
+            <span>Pending</span>
+        </div>
+
+        <div class="card">
+            <h3 id="completionRate">0%</h3>
+            <span>Completion</span>
+        </div>
+
+    </section>
+
+    <section class="task-form">
+
+        <input
+            type="text"
+            id="taskInput"
+            placeholder="Enter task..."
+        >
+
+        <select id="priority">
+            <option value="High">High</option>
+            <option value="Medium" selected>Medium</option>
+            <option value="Low">Low</option>
+        </select>
+
+        <select id="category">
+            <option value="Work">Work</option>
+            <option value="Learning">Learning</option>
+            <option value="Personal">Personal</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <input
+            type="date"
+            id="dueDate"
+        >
+
+        <button id="addTask">
+            Add Task
+        </button>
+
+    </section>
+
+    <section class="controls">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search tasks..."
+        >
+
+        <select id="sortTasks">
+            <option value="newest">Newest</option>
+            <option value="oldest">Oldest</option>
+            <option value="priority">Priority</option>
+        </select>
+
+    </section>
+
+    <section class="filters">
+
+        <button class="filter active" data-filter="all">
+            All
+        </button>
+
+        <button class="filter" data-filter="active">
+            Active
+        </button>
+
+        <button class="filter" data-filter="completed">
+            Completed
+        </button>
+
+    </section>
+
+    <ul id="taskList"></ul>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
